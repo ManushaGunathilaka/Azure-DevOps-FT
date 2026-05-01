@@ -8,7 +8,7 @@ public class AzureController {
 
     @GetMapping("/")
     public String sayHello() {
-        return "Hello, from Azure Devops";
+        return "Hello, from Azure Devops..!";
     }
 
 }
