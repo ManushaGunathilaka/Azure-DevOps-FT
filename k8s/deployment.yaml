@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boardapp-deployment
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: boardapp
+  template:
+    metadata:
+      labels:
+        app: boardapp
+    spec:
+      containers:
+        - name: boardapp
+          image: manushagunathilaka99/board-app:latest
+          ports:
+            - containerPort: 8080
